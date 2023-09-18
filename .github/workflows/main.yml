@@ -40,7 +40,9 @@ jobs:
         run: conan download doxygen/1.9.4@#2af713e135f12722e3536808017ba086:e94378795f92fbf88bb8cef7f9c2f38c4ecf9126 --remote conancenter
         
       - name: Run Doxygen
-        run: Documentation\run_doxygen.bat
+        run: |
+          cd Documentation
+          run_doxygen.bat
         
       - name: Upload Docs
         uses: actions/upload-pages-artifact@v1
