@@ -42,7 +42,7 @@ jobs:
       - name: Run Doxygen
         run: |
           cd Documentation
-          run_doxygen.bat
+          . .\run_doxygen.bat
         
       - name: Upload Docs
         uses: actions/upload-pages-artifact@v1
